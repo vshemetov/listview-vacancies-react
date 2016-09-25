@@ -1,0 +1,83 @@
+@font-face {
+  font-family: GothaProReg;
+  src: url(../materials/GothaProReg.ttf);
+}
+
+@font-face {
+  font-family: GothaProBol;
+  src: url(../materials/GothaProBol.ttf);
+}
+
+.content-header {
+  width: 320px;
+  height: 70px;
+  background-color: black;
+}
+
+.content-search {
+  display: flex;
+  width: 320px;
+  height: 53px;
+  background-color: #EBEBEB;
+}
+
+.content-input {
+  margin: auto;
+  width: 288px;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 0;
+}
+
+.content {
+  width: 320px;
+  height: 568px;
+  font-family: GothaProReg;
+  font-size: 14px;
+  color: #4A4A4A;
+  border: 1px solid #EBEBEB;
+}
+
+.content-row {
+  border-bottom: 1px solid rgba(151,151,151, .1);
+  margin-left: 17px;
+  margin-bottom: 8px;
+  padding-bottom: 2px;
+}
+
+.content-found {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(151,151,151, .1);
+  padding-bottom: 2px;
+  margin-left: 17px;
+  margin-top: 11px;
+  margin-bottom: 8px;
+}
+
+.content-found span {
+  margin-left: -1px;
+}
+
+.position {
+  color: black;
+  font-family: GothaProBol;
+  font-size: 20px;
+  margin-left: -1px;
+}
+
+.found-count {
+  color: #4554FF;
+  margin-top: -7px;
+  margin-bottom: 4px;
+}
+
+.found-count:empty {
+  margin-top: -7px;
+  margin-bottom: 0;
+}
+
+span {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 6px;
+}
