@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
+var stylesReset = require('../eric-meyer-reset.min_.css');
 var styles = require('../main.css');
 
 class VacanciesHeader extends React.Component {
   render() {
     return (
       <div className="content-header">
+        <div className="burger"></div>
+        <div className="preferences"></div>
       </div>
     );
   }
@@ -44,8 +48,33 @@ class VacanciesRow extends React.Component {
 }
 
 export default class VacanciesList extends Component {
+  constructor() {
+    super();
+    this.state = {
+      vacancies: []
+    };
+  }
+
+  componentDidMount() {
+    Axios.get('https://api.myjson.com/bins/1703c')
+      .then((response)=>{
+        if (response.status===200) {
+          return response.data.vacancies;
+        };
+      })
+      .then((responseData)=>{
+        this.setState(
+          {
+            vacancies: responseData
+          });
+      })
+      .catch(function (response) {
+        console.log(response);
+      });
+  }
+
   render() {
-    const vacanciesNodes = this.props.vacancies.map((jobItemData) => {
+    const vacanciesNodes = this.state.vacancies.map((jobItemData) => {
       return (<VacanciesRow spec={jobItemData} />);
     });
 
