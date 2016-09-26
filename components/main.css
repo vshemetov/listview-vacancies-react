@@ -132,3 +132,9 @@ span {
   text-align: center;
   color: #5c5c5c;
 }
+
+.content-list {
+  width: 320px;
+  height: 400px;
+  overflow: scroll;
+}

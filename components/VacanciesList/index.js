@@ -83,7 +83,9 @@ export default class VacanciesList extends Component {
         <VacanciesHeader />
         <VacanciesSearch />
         <VacanciesFound />
-        {vacanciesNodes}
+        <div className="content-list">
+          {vacanciesNodes}
+        </div>
       </div>
     );
   }
